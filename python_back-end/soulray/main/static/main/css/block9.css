@@ -1,0 +1,37 @@
+#section9 {
+    margin-top: 200px !important;
+    margin-bottom: -50px !important;
+    padding: 100px 0;
+    background-color: #2c2c2c;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+#section9 h1 {
+    text-align: left; /* Выравнивание по левому краю */
+    margin-left: -550px; /* Чтобы текст был слева, как остальные элементы */
+    font-weight: bold;
+    margin-top: 20px; /* Отступ сверху для заголовка */
+    margin-bottom: 100px; /* Отступ снизу от заголовка */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-container {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 700px !important;
+    margin-left: -450px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+               0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.founder-info {
+    margin-left: -450px;
+}

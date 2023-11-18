@@ -1,0 +1,75 @@
+#section7 {
+    font-family: 'Arial', sans-serif;
+    padding: 50px 30px 100px 100px;
+    background-color: #222;
+    height: auto;
+    margin-top: -100px;
+}
+
+#section7 h6 {
+    margin-bottom: 50px;
+    font-size: 4em;
+    color: #FFF;
+    text-align: left;
+}
+
+.container7 {
+    display: flex;
+    flex-direction: row; /* Чтобы контейнеры шли слева направо */
+    justify-content: space-between; /* Чтобы было пространство между контейнерами */
+    align-items: start;
+    gap: 20px;
+}
+
+.info-container7-left, .info-container7-right {
+    flex: 0 0 48%; /* Немного меньше 50%, чтобы учесть возможные отступы */
+    display: flex;
+    flex-direction: column; /* Чтобы блоки шли сверху вниз */
+    gap: 20px;
+}
+
+.advantage-item7 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.advantage-item7 h3, .advantage-item7 p {
+    margin: 0; /* Убрали дополнительные отступы */
+}
+
+.advantage-item7 h3 {
+    font-size: 1.8em;
+    color: #FFF;
+}
+
+.advantage-item7 p {
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+.image-wrapper7 {
+    position: relative;
+    display: inline-block;
+}
+
+.advantage-icon7 {
+    font-size: 50px;
+    color: #FFF;
+    position: relative;
+    z-index: 2;
+    left: 0;  /* Оставляем иконку без смещения */
+}
+
+.image-background7 {
+    position: absolute;
+    top: 50%;
+    left: 10px;  /* Смещаем фоновый элемент слева от иконки */
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: #3b8476;
+    border-radius: 50%;
+    z-index: 1;
+}

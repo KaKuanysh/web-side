@@ -1,0 +1,91 @@
+#section4 {
+    font-family: 'Arial', sans-serif;
+    padding: -2000px 30px 100px 100px; /* Изменил padding справа и слева, увеличил padding снизу */
+    background-color: #222;
+    height: 1800px;
+    margin-top: -100px;
+}
+
+#section4 h6 {
+    margin-bottom: 50px;
+    font-size: 4em;
+    color: #FFF;
+    text-align: left;
+}
+
+.container4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-container {
+    flex: 0 0 50%;  /* Для 50% ширины экрана */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.advantage-item4 {
+    flex: 0 0 calc(50% - 10px);  /* Так каждый блок будет занимать половину .info-container */
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.advantage-item4 h3,
+.advantage-item4 p {
+    text-align: left;
+}
+
+.advantage-item4 h3 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #FFF;
+}
+
+.advantage-item4 p {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+/* Стили для изображений и иконок */
+.image-wrapper4 {
+    position: relative;
+    display: inline-block;
+}
+
+.advantage-icon4 {
+    font-size: 50px;
+    color: #FFF !important;
+    left: 10px; /* Добавлено */
+    position: relative; /* Добавлено */
+}
+
+.image-background4 {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    background-color: #3b8476;
+    border-radius: 35px;
+    z-index: -1;
+}
+
+/* Стили для овального изображения */
+.oval-image-wrapper {
+    flex: 0 0 50%;  /* Также занимает 50% экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oval-image {
+    border-radius: 50%;
+    width: 450px;
+    height: 600px;
+    object-fit: cover;
+}

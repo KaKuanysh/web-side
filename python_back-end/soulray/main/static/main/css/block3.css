@@ -1,0 +1,70 @@
+/* Основной стиль для секции */
+#section3 {
+    font-family: 'Arial', sans-serif;
+    padding: 700px 0;
+    background-color: #444;  /* Если фон секции должен быть темным */
+}
+
+#section3 h1 {
+    margin-bottom: 50px;
+    font-size: 2.5em; /* Увеличиваем размер заголовка */
+    color: #FFF;  /* Белый цвет для заголовка */
+    text-align: left;  /* Выравнивание заголовка по левому краю */
+}
+
+#section3 > h6 {
+    margin-bottom: 50px;
+    font-size: 4em; /* Увеличиваем размер заголовка */
+    color: #FFF;
+    text-align: left;
+    padding-left: 20px; /* Добавляем небольшой отступ слева для заголовка */
+}
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0px; /* Отступы между блоками */
+}
+
+.advantage-item3 {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 40px;
+    text-align: left;  /* Выравнивание контента блока по левому краю */
+}
+
+.advantage-item3 h3 {
+    margin-top: 20px;
+    font-size: 1.8em; /* Увеличиваем размер подзаголовка */
+    color: #FFF;
+}
+
+.advantage-item3 p {
+    margin-top: 15px;
+    font-size: 1.2em; /* Увеличиваем размер абзаца */
+    color: #FFF;
+    text-align: left;  /* Выравнивание абзаца по левому краю */
+}
+
+/* Стили для изображений */
+.image-wrapper3 {
+    position: relative;
+    display: inline-block;
+}
+
+.advantage-image3 {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.image-background3 {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 110px;
+    height: 110px;
+    background-color: #00c853;
+    border-radius: 50%;
+    z-index: -1;
+}

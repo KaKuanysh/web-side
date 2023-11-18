@@ -1,0 +1,93 @@
+/* Стили для пятой секции */
+#section5 {
+    font-family: 'Montserrat', sans-serif;
+    height: 1200px;
+    margin: 0;
+    background-color: #3b8476;
+    position: relative;
+    padding: 20px;
+}
+
+.container5 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: -60px;
+    padding-left: 100px;
+}
+
+#ft {
+    text-align: left;
+    font-weight: bold;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.yellow-dot {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.yellow-dot::before {
+    content: '\2022';
+    color: yellow;
+    font-size: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.yellow-dot:last-of-type {
+    margin-bottom: 20px;
+}
+
+/* Стили для блока с дополнительными преимуществами */
+.bonus-text-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.bonus-text {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+
+/* Стили для кнопки в пятой секции */
+.btn5 {
+    margin-top: 150px;
+    padding: 4px 5px;
+    font-weight: bold;
+    border-radius: 600px;
+    font-size: 35px;
+    background-color: #ffc205;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn5:hover {
+    background-color: #84B09F;
+    color: #fff;
+}
+
+.btn5:active, .btn5:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.Block5_picture{
+    z-index: 1;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 60%; /* Позиционирование по вертикали */
+    right: 0; /* Начать справа */
+    transform: translateY(-60%); /* Центрирование по вертикали */
+    width: 850px;
+    height: auto;
+}

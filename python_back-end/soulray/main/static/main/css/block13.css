@@ -1,0 +1,54 @@
+#section13 {
+    margin-top: 250px;
+    background-color: #2c2c2c;
+    padding: 20px 0;
+}
+
+.footer-navbar {
+    display: flex;
+    justify-content: flex-start; /* начать слева */
+    align-items: center;
+    width: 100%; /* растягивается на всю ширину */
+    flex-wrap: wrap; /* элементы не переносятся на новую строку */
+    gap: 60px; /* уменьшенное расстояние между элементами */
+    padding: 0; /* убедитесь, что нет внутренних отступов */
+}
+
+.logo-container, .nav-links, .social-links, .add-comment {
+    display: flex;
+    align-items: center;
+    margin: 100; /* убедитесь, что нет внешних отступов */
+}
+
+
+.nav-links {
+    gap: 15px; /* уменьшенное расстояние между ссылками */
+}
+
+.social-links {
+    gap: 10px;
+}
+
+.add-comment {
+    margin-left: 10px; /* уменьшенный отступ слева */
+}
+
+.full-width-image {
+
+    width: 100px;
+    height: auto; /* чтобы сохранить пропорции изображения */
+}
+#section13 img {
+    width: 100%;
+    height: auto;
+    display: block; /* чтобы изображение отображалось как блочный элемент */
+}
+#section13 .logo-container .logo-image {
+    width: 50px;
+    height: 50px;
+}
+#section13 img[data-aos="flip-left"] {
+    margin-bottom: 200px; /* или любое другое значение, которое вам подходит */
+}
+
+

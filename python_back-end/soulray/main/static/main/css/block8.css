@@ -1,0 +1,43 @@
+#section8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh + 500px);
+    padding: 450px 60px 60px 60px;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 60%;
+}
+
+#section8 h1, #section8 h6 {
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+#section8 p {
+    margin-right: 40px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* вертикальное направление */
+    align-items: center; /* выравнивание по центру по горизонтали */
+}
+
+#bandaPandaImage {
+    flex-shrink: 0;
+    width: 500px;;
+    height: auto;
+    margin-bottom: 20px; /* добавляем небольшой отступ между изображением и текстом */
+}
+
+.founder-info {
+    text-align: center;
+}
+
+.founder-info p {
+    margin: 0;
+}

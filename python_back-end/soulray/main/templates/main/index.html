@@ -1,0 +1,485 @@
+{% extends "main/layout.html"%}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
+<link rel="stylesheet" href="{% static 'main/css/First_Block.css'%}">
+{% block title %} Главная страница {% endblock %}
+{% block content %}
+
+<div class="features" data-aos="fade-right" data-aos-duration="5000">
+    <h1 class="h1" data-aos="fade-right" data-aos-duration="6000"> Думаешь <br>о пассивном доходе?</h1>
+    <p class="first_block_text" data-aos="fade-right">Стань владельцем собственной кофейни<br>самообслуживания «Banda Panda» </p>
+    <div class="first_block_text_with_pictures">
+        <h5><i class="fa-regular fa-clock" style="color: #f0c505;"></i><span class="icon-text">Запуск бизнеса 30-45 дней</span></h5><br>
+        <h5><i class="fa-regular fa-calendar" style="color: #f0c505;"></i><span class="icon-text">Окупаемость от 6-18 месяцев</span></h5><br><h5><i class="fa-solid fa-money-bill" style="color: #f0c505;"></i><span class="icon-text"> Чистая прибыль от 40 000 сом в месяц</span></h5><br>
+    </div>
+
+    <div style="position: relative;">
+        <img src="https://banda-panda.kg/media/hero-subject.webp?v=2," alt="Описание картинки" class="right-top-image_girl">
+        <img src="https://banda-panda.kg/media/hero-object.webp?v=2," alt="Описание картинки" class="right-top-image_machine">
+    </div>
+
+<button id="businessPlanBtn" class="btn btn-warning">Твой бизнес план</button>
+</div>
+
+<div id="formContainer" style="display: none;">
+<button id="closeFormBtn" style="position: absolute; top: 75px; right: 510px; background: #ffc205; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-x" style="color: black;"></i></button>
+<form id="requestForm" >
+        <h5 class="head_text_h5" >Заполните заявку!</h5>
+        <label>Ваше имя:<input type="text" name="name" required></label>
+        <label>Телефон:<input type="tel" name="phone" required></label>
+        <label>Город:<input type="text" name="city" required></label>
+        <input type="submit" value="Отправить">
+</form>
+    <div id="thankYouMessage" style="display: none;">Спасибо, ваша заявка отправлена!</div>
+</div>
+
+
+<section id="section2" data-aos="zoom-in" data-aos-duration="5000"  style="margin-top: 30px;">
+    <link rel="stylesheet" href="{% static 'main/css/calculator.css' %}">
+        <div class="container" data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1500">
+            <label for="cupsRange">Выбери кол-во стаканчиков в день: <span id="cupsValue">3</span></label>
+            <input type="range" id="cupsRange" min="3" max="300" value="3" oninput="updateCupsValue(this.value)">
+            <label for="cafesRange">Выбери кол-во кофеен: <span id="cafesValue">1</span></label>
+            <input type="range" id="cafesRange" min="1" max="300" value="1" oninput="updateCafesValue(this.value)">
+            <label for="monthsRange">Выбери кол-во месяцев: <span id="monthsValue">1</span></label>
+            <input type="range" id="monthsRange" min="1" max="300" value="1" oninput="updateMonthsValue(this.value)">
+        <div class="result-container">
+            <div id="result"> <h2 class="profit-value">Чистая прибыль  </h2> <span class="profit-value_ci"></span>  <h5 >сомов  </h5></div>
+            <img id="C_picture" src="{% static 'main/img/белый.png'%}" alt="белый круг">
+        </div>
+        </div>
+</section>
+
+<section id="section3" data-aos="zoom-in" data-aos-duration="5000" style="margin-top: 10px;">
+    <link rel="stylesheet" href="{% static 'main/css/block3.css' %}">
+    <h6>Если ты: </h6>
+    <div class="container3">
+        <!-- Блоки 1 и 2 -->
+        <div class="advantage-item3">
+            <div class="image-wrapper3" data-aos='fade-right'>
+                <div class="image-background3"></div>
+                <img class="advantage-image3" src="{% static 'main/img/img3_1.png' %}" alt="Иконка 1">
+            </div>
+            <h3 data-aos='fade-right'>Инвестор</h3>
+            <p data-aos='fade-right'>Твоя цель увеличить пассивный доход, найми только 1-го специалиста для управления бизнесом. Одного человека будет достаточно, чтобы следить и управлять всеми аспектами деятельности кофейни.</p>
+        </div>
+
+        <div class="advantage-item3">
+            <div class="image-wrapper3" data-aos="fade-left">
+                <div class="image-background3"></div>
+                <img class="advantage-image3" src="{% static 'main/img/img3_2.png' %}" alt="Иконка 2">
+            </div>
+            <h3 data-aos="fade-left">Работаешь в найме</h3>
+            <p data-aos="fade-left">Хочешь зарабатывать больше, но у тебя нет опыта в бизнесе и ты опасаешься потерять все свои сбережения, обрати внимание на бизнес с низким порогом входа и гарантированной окупаемостью как “Banda Panda”.</p>
+        </div>
+
+        <!-- Блоки 3 и 4 -->
+        <div class="advantage-item3">
+            <div class="image-wrapper3">
+                <div class="image-background3" data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1500"></div>
+                <img class="advantage-image3" src="{% static 'main/img/img3_3.png' %}" alt="Иконка 3"> <!-- Измените путь к картинке, если он другой -->
+            </div>
+            <h3 data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1500">Предприниматель</h3>
+            <p data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1500">Твоя задача - повысить доход в текущем бизнесе (салон красоты, автосервис или заправка), где присутствует пешеходный трафик, рассмотри возможность установки кофейного автомата “Banda Panda” внутри помещения. Такой шаг поможет дополнительно увеличить прибыль за счет получения дополнительного дохода.</p>
+        </div>
+
+        <div class="advantage-item3">
+            <div class="image-wrapper3">
+                <div class="image-background3" data-aos="zoom-in-down"></div>
+                <img class="advantage-image3" src="{% static 'main/img/img3_4.png' %}" alt="Иконка 4"> <!-- Измените путь к картинке, если он другой -->
+            </div>
+            <h3 data-aos="zoom-in-down">Студент, фрилансер или мама в декрете</h3>
+            <p data-aos="zoom-in-down">И есть желание создать свой бизнес, но нет больших средств для вложения, открой кофейню самообслуживания “Banda Panda”. Такой вид бизнеса является отличным вариантом для старта и не требует больших инвестиций.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="section4" data-aos="zoom-in" data-aos-duration="5000" style="margin-top: 10px;">
+    <link rel="stylesheet" href="{% static 'main/css/block4.css' %}">
+    <h6 data-aos="zoom-out-up">Преимущества франшизы Banda Panda</h6>
+    <div class="container4">
+
+        <!-- Контейнер для блоков с информацией -->
+        <div class="info-container">
+
+            <!-- Первый блок с информацией -->
+            <div class="advantage-item4">
+                <div class="image-wrapper4">
+                    <div class="image-background4"></div>
+                    <i class="advantage-icon4 fas fa-cash-register" data-aos="zoom-out-left"></i>
+                </div>
+                <h3 data-aos="zoom-in-up">620 000 сом</h3>
+                <p data-aos="zoom-in-up">Твои вложения в автоматизированную кофейню</p>
+            </div>
+
+            <!-- Второй блок с информацией -->
+            <div class="advantage-item4">
+                <div class="image-wrapper4">
+                    <div class="image-background4" data-aos="zoom-out-left"></div>
+                    <i class="advantage-icon4 fas fa-chart-line" data-aos="zoom-out-left"></i>
+                </div>
+                <h3 data-aos="zoom-in-up">от 40 000 сом в месяц</h3>
+                <p data-aos="zoom-in-up">Твоя чистая прибыль</p>
+            </div>
+
+            <!-- Третий блок с информацией -->
+            <div class="advantage-item4">
+                <div class="image-wrapper4">
+                    <div class="image-background4" data-aos="zoom-out-left"></div>
+                    <i class="advantage-icon4 fas fa-clock" data-aos="zoom-out-left"></i>
+                </div>
+                <h3 data-aos="zoom-in-up">от 6-18 месяцев</h3>
+                <p data-aos="zoom-in-up">Срок окупаемости</p>
+            </div>
+
+            <!-- Четвертый блок с информацией -->
+            <div class="advantage-item4">
+                <div class="image-wrapper4">
+                    <div class="image-background4" data-aos="zoom-out-left"></div>
+                    <i class="advantage-icon4 fas fa-tag" data-aos="zoom-out-left"></i>
+                </div>
+                <h3 data-aos="zoom-in-up">Низкие цены</h3>
+                <p data-aos="zoom-in-up">на все ингредиенты и расходные материалы</p>
+            </div>
+
+            <!-- Пятый блок с информацией -->
+            <div class="advantage-item4">
+                <div class="image-wrapper4">
+                    <div class="image-background4" data-aos="zoom-out-left"></div>
+                    <i class="advantage-icon4 fas fa-hourglass-start" data-aos="zoom-out-left"></i>
+                </div>
+                <h3 data-aos="zoom-in-up">до 45 дней</h3>
+                <p data-aos="zoom-in-up">Быстрый запуск</p>
+            </div>
+        </div>
+
+        <!-- Контейнер для овального изображения -->
+        <div class="oval-image-wrapper" data-aos="fade-down" data-aos-easing="linear"  data-aos-duration="1500">>
+            <img src="https://banda-panda.kg/media/coffeerpoint-and-woman.webp?v=2" alt="Banda Panda Image" class="oval-image">
+        </div>
+    </div>
+</section>
+
+
+<section id="section5" data-aos="zoom-in" data-aos-duration="5000"  style="margin-top: -250px;">
+    <link rel="stylesheet" href="{% static 'main/css/block5.css' %}">
+
+    <div class="container5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <h1 id="ft">Вы получаете:</h1>
+        <span class="yellow-dot">Кофемашина</span>
+        <span class="yellow-dot">Терминал безналичной оплаты (доп.опция)</span>
+        <span class="yellow-dot">Kупюроприемник для наличной оплаты</span>
+        <span class="yellow-dot">Мебель в фирменном стиле</span>
+        <span class="yellow-dot">Световая вывеска</span>
+        <span class="yellow-dot">Диспенсер для стаканов 2 шт.</span>
+        <span class="yellow-dot"> Органайзер под сиропы, стаканы, сахар, крышки, палочки</span>
+
+        <div class="bonus-text-container">
+            <span class="bonus-text">+ Запас ингредиентов на 30 000 сом в подарок</span>
+            <span class="bonus-text">+ Подключение к телеметрии для отслеживания<br> показателей онлайн</span>
+            <span class="bonus-text">+ Доступ в личный кабинет и базу знаний</span>
+            <span class="bonus-text">+ Персональный менеджер отдела Заботы</span>
+        </div>
+        <button class="btn5 btn btn-warning" data-aos="fade-up" data-aos-duration="3000">Хочу стать партнером!</button>
+
+        <img class="Block5_picture" src="{% static 'main/img/img5.png'%}" alt="кофе машина">
+    </div>
+</section>
+
+<section id="section6" data-aos="zoom-in-left">
+    <link rel="stylesheet" href="{% static 'main/css/block6.css' %}">
+    <h1>Меню</h1>
+    <div class="swiper-button-prev"> < </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee1.png'%}" alt="Кофе 1"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee2.png'%}" alt="Кофе 2"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee3.png'%}" alt="Кофе 3"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee4.png'%}" alt="Кофе 4"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee5.png'%}" alt="Кофе 5"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee6.png'%}" alt="Кофе 6"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee7.png'%}" alt="Кофе 7"></div>
+            <div class="swiper-slide"><img src="{% static 'main/img/coffee8.png'%}" alt="Кофе 8"></div>
+        </div>
+        <div class="swiper-button-next"> > </div>
+    </div>
+</section>
+
+
+<section id="section7" data-aos="zoom-in" data-aos-duration="5000" style="margin-top: 10px;">
+    <link rel="stylesheet" href="{% static 'main/css/block7.css' %}">
+    <h6>Почему выгодно работать с нами?</h6>
+    <div class="container7">
+        <!-- Контейнер для блоков с информацией слева -->
+        <div class="info-container7-left">
+            <!-- Блоки слева -->
+            <div class="advantage-item7" data-aos="fade-right">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-business-time"></i>
+                </div>
+                <h3>Отработанная успешная бизнес-модель</h3>
+                <p></p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-right">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-clock"></i>
+                </div>
+                <h3>Быстрая окупаемость <br> от 6-18 месяцев</h3>
+                <p></p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-right">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-video"></i>
+                </div>
+                <h3>База знаний с видео инструкциями по установке и обслуживанию аппарата</h3>
+                <p></p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-right">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Помощь в выборе локаций</h3>
+                <p></p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-right">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-coffee"></i>
+                </div>
+                <h3>Идеальный вкус кофе</h3>
+                <p>Зерно, обжаренное по уникальной рецептуре компании «Banda Panda», что гарантирует стабильное качество для всех партнеров</p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-right">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-flask"></i>
+                </div>
+                <h3>Лаборатория вкуса</h3>
+                <p>Разработка новых и уникальных вкусов кофейных напитков</p>
+            </div>
+        </div>
+
+        <!-- Контейнер для блоков с информацией справа -->
+        <div class="info-container7-right">
+            <!-- Блоки справа -->
+            <div class="advantage-item7" data-aos="fade-left">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>Отсутствие паушального взноса</h3>
+                <p></p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-left">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-cloud"></i>
+                </div>
+                <h3>Управление бизнесом онлайн</h3>
+                <p>В режиме реального времени ты видишь выручку по каждой стойке, сколько и какие напитки покупают</p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-left">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-bullhorn"></i>
+                </div>
+                <h3>Маркетинговая поддержка</h3>
+                <p></p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-left">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-tags"></i>
+                </div>
+                <h3>Лучшие цены на все ингредиенты и расходные материалы</h3>
+                <p>Обеспечение всех партнёров продукцией высокого качества по цене ниже рыночной</p>
+            </div>
+            <div class="advantage-item7" data-aos="fade-left">
+                <div class="image-wrapper7">
+                    <div class="image-background7"></div>
+                    <i class="advantage-icon7 fas fa-industry"></i>
+                </div>
+                <h3>Собственное производство</h3>
+                <p>по изготовлению мебельных стоек для кофеен «Banda Panda»</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section8" data-aos="zoom-in" data-aos-duration="5000" style="margin-top: -250px;">
+       <link rel="stylesheet" href="{% static 'main/css/block8.css' %}">
+    <div class="text-container">
+        <h1 > O Banda Panda </h1>
+    <p data-aos="zoom-out-up">Основатель компании, Давран Адылович Садыкахунов, тщательно изучал бизнес <br> кофейных аппаратов и самостоятельно прошел весь процесс - от работы с <br> поставщиками кофейных зерен до взаимодействия с потребителями - прежде <br> чем предложить его местному рынку под брендом "Banda Panda". </p>
+
+    <p data-aos="zoom-out-up">Наша компания предлагает лучший кофе по приемлемой цене, обеспечивая <br> стабильное качество и круглосуточный доступ к вкусному напитку. Мы уверены в <br> надежности нашего бизнеса, способного справиться с любыми вызовами, <br> включая кризисы, пандемии и негативный человеческий фактор. </p>
+
+    <p data-aos="zoom-out-up"> Наша главная цель - заслужить доверие наших клиентов к кофейным аппаратам, <br> которые обеспечивают совершенный контроль качества без перебоев. </p>
+
+    <p data-aos="zoom-out-up">Бренд "BandaPanda" - это история о вкусном кофе, где мы стремимся обеспечить <br> высокое качество на долгие годы. </p>
+
+    <p data-aos="zoom-out-up"> Мы первое сообщество кофеманов в Кыргызстане, которое стремится <br> обеспечить каждому доступ к качественному кофе по доступной цене, путем <br> расширения сети кофеен самообслуживания. </p>
+
+    <h6 data-aos="zoom-out-up">Banda Panda. Для настоящих кофеманов!</h6>
+    </div>
+
+    <div class="image-container">
+        <img id="bandaPandaImage" src="https://banda-panda.kg/media/seo.webp?v=2" alt="Banda Panda Image" data-aos="flip-up">
+        <div class="founder-info">
+            <p data-aos="zoom-in-left">Давран Адылович Садыкахунов</p>
+            <p data-aos="zoom-in-left">Основатель компании</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="section9" data-aos="zoom-in" data-aos-duration="5000" style="margin-top: -250px;">
+    <link rel="stylesheet" href="{% static 'main/css/block9.css' %}">
+    <h1>Обращение основателя</h1>
+    <div class="content-container" data-aos="zoom-out-right">
+        <div class="video-container"  data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+            <iframe width="700" height="450" src="https://www.youtube.com/embed/NUIkzLheOLY" title="Banda Panda франшиза, знакомство, свой личный путь!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="founder-info">
+            <p data-aos="zoom-in-left">Давран Адылович Садыкахунов</p>
+            <p data-aos="zoom-in-left">Основатель компании</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="section10" data-aos="zoom-in" data-aos-duration="5000"  style="margin-top: -250px;">
+    <link rel="stylesheet" href="{% static 'main/css/block10.css' %}">
+
+    <h1>Вопросы-ответы</h1>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <h2 class="faq-question">Кто обслуживает?<span class="toggle-btn faq-toggle">+</span></h2>
+            <p class="faq-answer">Наша кофейня очень проста в обслуживании. Вы это можете делать самостоятельно! Среднее время процесса составляет 15 минут,<br> при этом никаких специальных знаний не потребуется. Мы предоставим вам подробную видео инструкцию, чтобы ничего не пропустить.</p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">Какая стоимость аренды и занимаемой площади? <span class="toggle-btn faq-toggle">+</span></h2>
+            <p class="faq-answer">Достаточно 1 кв.м для установки кофейной стойки. Средняя месячная аренда - 3000 сом.</p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">Какая кофемашина используется?<span class="toggle-btn faq-toggle">+</span></h2>
+            <p class="faq-answer">Супер автомат LV307</p>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-question">Сколько времени уходит на обслуживание одного аппарата?<span class="toggle-btn faq-toggle">+</span></h2>
+            <p class="faq-answer">15 минут в день (видео инструкция представлена в Базе знаний)</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="section11" data-aos="zoom-in" data-aos-duration="5000" style="margin-top: -250px;">
+    <link rel="stylesheet" href="{% static 'main/css/block11.css' %}">
+    <div id="newRequestFormContainer">
+        <form id="newRequestForm">
+            <h1>Остались вопросы?</h1>
+            <h5 class="head_text_h5">Заполните заявку!</h5>
+            <label>Ваше имя:<input type="text" name="name" required></label>
+            <label>Телефон:<input type="tel" name="phone" required></label>
+            <label>Город:<input type="text" name="city" required></label>
+            <input type="submit" value="Отправить">
+        </form>
+        <div id="newThankYouMessage" style="display: none;">
+            Спасибо, ваша заявка отправлена!
+            <button id="closeNewFormBtn"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <img class="Block5_picture" src="{% static 'main/img/cup.png'%}" alt="кружка"data-aos="flip-left">
+    </div>
+</section>
+
+
+
+<section id="section12">
+    <!-- Подключение FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/block12.css' %}">
+
+    <div class="info-container">
+        <h2>Контакты</h2>
+
+        <div class="info-item">
+            <i class="fas fa-phone"></i> <!-- Иконка телефона -->
+            <p>Сотовый телефон: +996 773 888 222</p>
+        </div>
+
+        <div class="info-item">
+            <i class="fab fa-whatsapp"></i><!-- Иконка WhatsApp -->
+            <p>WhatsApp телефон: +996 773 888 222</p>
+        </div>
+
+        <div class="info-item">
+            <i class="fas fa-envelope"></i> <!-- Иконка почты -->
+            <p>Email: office@banda-panda.com</p>
+        </div>
+
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i> <!-- Иконка адреса -->
+            <p>Адрес: Кыргызская Республика, г. Бишкек, ул. Ашхабадская, дом 51</p>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.7287949944757!2d74.59452957552388!3d42.85745940353335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb62b0e4015f7%3A0xa5917bd459eb9ea3!2zNTEg0YPQuy4g0JDRiNGF0LDQsdCw0LTRgdC60LDRjywg0JHQuNGI0LrQtdC6IDcyMDAxNywg0JrRi9GA0LPRi9C30YHRgtCw0L0!5e0!3m2!1sru!2smy!4v1697963835344!5m2!1sru!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<section id="section13">
+    <link rel="stylesheet" href="{% static 'main/css/block13.css' %}">
+    <img src="{% static 'main/img/blcok13.png' %}" alt="" data-aos="flip-left">
+    <div class="footer-navbar">
+     <div class="logo-container">
+            <img src="{% static 'main/img/loggoP.png' %}" alt="Лого"  class="logo-image">
+            <span class="logo_Coffee">Калькулятор прибыли</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Главная</a></li>
+            <li><a href="{% url 'about' %}"><i class="fa-solid fa-address-card"></i> Почему мы?</a></li>
+            <li><a href="{% url 'news_home' %}"><i class="fa-solid fa-newspaper"></i> Отзывы</a></li>
+            <li><a href="#"><i class="fa-sharp fa-solid fa-phone"></i> Контакты</a></li>
+        </ul>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/people/Banda-Panda/100093198786035/?sk=about" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/banda_panda.kg/?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@BandaPandakg" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@bandapandakg" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <div class="add-comment">
+            <a href="{% url 'create' %}" class="btn btn-warning"><i class="fas fa-plus-circle"></i> Добавить коментарий</a>
+        </div>
+    </div>
+</section>
+
+
+
+{% block scripts %}
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'main/js/block6.js' %}"></script>
+    <script src="{% static 'main/js/block11.js' %}"></script>
+    <script src="{% static 'main/js/calculator.js' %}"></script>
+    <script src="{% static 'main/js/index.js' %}"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="{% static 'main/js/block5.js' %}"></script>
+    <script src="{% static 'main/js/block10.js' %}"></script>
+
+{% endblock %}
+
+
+{% endblock %}

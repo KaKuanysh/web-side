@@ -1,0 +1,50 @@
+#section12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 0;
+    background-color: #2c2c2c;
+    flex-direction: row-reverse;
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.map-container {
+    flex: 1.5;
+    height: 1200px;
+    margin-left: 20px;
+    margin-top: 120px; /* Добавлен верхний отступ */
+}
+
+
+
+.info-item {
+    display: flex;
+    align-items: center; /* Чтобы иконка и текст были вертикально выровнены по центру */
+    margin-bottom: 35px; /* Отступ между элементами */
+}
+
+.info-container h2 {
+    margin-top: -20px;
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.info-item p {
+    font-size: 30px;
+    margin: 0; /* Убрать стандартные отступы */
+    margin-left: 10px; /* Добавить небольшой отступ слева от текста */
+}
+
+.info-container .fas, .info-container .fab {
+    font-size: 30px; /* Увеличен размер иконок */
+    margin-right: 15px; /* Увеличен отступ справа от иконок для лучшего разделения */
+    color: #3b8472;
+}
+
+

@@ -1,0 +1,136 @@
+#section11 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px 20px;
+    height: 950px;
+    background-color: #2c2c2c;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#newRequestFormContainer {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+#newRequestForm {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#newRequestForm input[type="submit"] {
+    background-color: #ffc205;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+#newRequestForm input[type="submit"]:hover {
+    background-color: #84B09F;
+}
+
+#newRequestForm input[type="submit"]:active,
+#newRequestForm input[type="submit"]:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#newThankYouMessage {
+    margin-top: 50px;
+    font-size: 24px;
+    color: white;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    z-index: 1001;
+    white-space: normal;
+}
+
+#closeNewFormBtn {
+    cursor: pointer;
+    background-color: #ffc205;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 600px;
+    right: 10px;
+}
+
+#newThankYouMessage h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 200px;
+    margin-top: 0;
+    white-space: nowrap;
+    text-align: left;
+}
+
+#newThankYouMessage p {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+#newRequestForm label,
+#newRequestForm input[type="submit"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#newRequestForm input[type="text"],
+#newRequestForm input[type="tel"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#newRequestForm h1 {
+    white-space: nowrap;
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 120px;
+    margin-top: -20px;
+}
+
+#newRequestForm .head_text_h5 {
+    margin-left: 0px;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    margin-top: 110px;
+}
+
+#newRequestFormContainer img {
+    margin-left: 250px;
+    margin-top: -250px;
+    width: 350px;       /* Увеличиваем ширину */
+    height: 450px;      /* Уменьшаем высоту */
+    border-radius: 50%; /* Делаем картинку овальной */
+    object-fit: cover;  /* Сохраняем пропорции изображения */
+}
+

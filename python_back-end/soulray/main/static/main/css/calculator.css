@@ -1,0 +1,211 @@
+body, html {
+    color: white;
+    height: 100%;
+    margin: 0;
+    background: #2c2c2c;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* Секция перед калькулятором */
+#pre-calculator-section {
+    background-color: #2c2c2c;
+    padding: 50px 0;
+}
+
+#pre-calculator-section .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Секция калькулятора */
+#section2 {
+    background-color: #2c2c2c;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section2 .container {
+    position: relative; /* Добавлено */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание элементов по левому краю */
+    gap: 20px; /* Расстояние между элементами */
+}
+#section2 .result-container {
+    width: 100%; /* Занимает всю ширину родительского элемента */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание элементов по левому краю */
+}
+
+
+/* Стили для элементов формы */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35%;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px; /* Уменьшена высота */
+    background: #E0E0E0;
+    border-radius: 4px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+body input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Отключает стандартные стили */
+    appearance: none; /* Отключает стандартные стили */
+    width: 16px;
+    height: 16px;
+    border-radius: 60%;
+    background: white;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out, transform 0.15s ease-in-out;
+    border: 2px solid #FFA500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -6px; /* Изменено */
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #FFA500;
+    transform: scale(1.1);
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    background: #FFA500;
+    transform: scale(1.15);
+}
+
+body input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 4px;
+    border: none;
+    border-radius: 4px;
+    background: #E0E0E0;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out, transform 0.15s ease-in-out;
+    border: 2px solid #FFA500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -6px; /* Изменено */
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out, transform 0.15s ease-in-out;
+    border: 2px solid #FFA500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -6px; /* Изменено */
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    background: #FFA500;
+    transform: scale(1.15);
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #E0E0E0;
+    border-radius: 4px;
+}
+
+
+input[type="range"]::-moz-range-progress {
+    background-color: #FFA500;
+    border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #E0E0E0;
+    border-radius: 4px;
+    border: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #E0E0E0;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: #FFA500; /* Желтый цвет */
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+    background: #FFA500; /* Желтый цвет */
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Стили для лейблов */
+#section2 label {
+    display: block;
+    text-align: left;
+    margin: 0; /* Убраны отрицательные отступы */
+
+}
+
+/* Стили для результатов и изображения */
+#result {
+    position: absolute; /* Добавлено */
+    z-index: 2; /* Поверх картинки */
+    top: 50%; /* Позиционирование по вертикали */
+    left: 77%; /* Позиционирование по горизонтали */
+    transform: translate(-50%, -50%); /* Центрирование */
+    width: 250px; /* примерное значение, можно подстроить под свои нужды */
+    height: 490px;
+    text-align: center; /* Текст по центру */
+}
+
+#C_picture {
+    z-index: 1;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Позиционирование по вертикали */
+    right: 0; /* Начать справа */
+    transform: translateY(-80%); /* Центрирование по вертикали */
+}
+
+.profit-circle {
+    width: 650px;
+    height: 550px;
+    border-radius: 0%;
+    object-fit: cover;
+}
+.profit-value {
+    font-weight: bold;
+    font-size: 25px; /* или любой другой размер, который вам подходит */
+}
+.profit-value_ci {
+    font-weight: bold;
+    font-size: 25px; /* или любой другой размер, который вам подходит */
+}
+
+
